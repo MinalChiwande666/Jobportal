@@ -1,0 +1,5 @@
+.jobdetailContainer{
+    height: auto;
+    position: sticky;
+    z-index: 999;
+}
