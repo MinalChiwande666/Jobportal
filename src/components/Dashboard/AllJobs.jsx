@@ -10,7 +10,7 @@ const AllJobs = () => {
   const navigate = useNavigate()
   const [JobTitle,setJobTitle] = useState('')
   const [Location,setLocation] = useState('')
-  const [PostedDate,setPostedDate] = useState()
+  // const [PostedDate,setPostedDate] = useState()
   return (
     <Container className='d-flex p-3 flex-column gap-4'>
          <div className='d-flex align-items-center justify-content-between'>

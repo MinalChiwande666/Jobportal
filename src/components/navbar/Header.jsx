@@ -1,7 +1,9 @@
 import React from 'react'
-import { Navbar,Container } from 'react-bootstrap'
+import { Navbar,Container, Button } from 'react-bootstrap'
 import { BellFill,  ChatLeftDotsFill, PersonFill } from 'react-bootstrap-icons'
+import { useNavigate } from 'react-router-dom'
 const Header = () => {
+  const navigate = useNavigate()
     const nav = [
         {
             id:1,
@@ -32,6 +34,7 @@ const Header = () => {
              <h5><ChatLeftDotsFill className='text-dark'/></h5>
              <h5><BellFill className='text-dark'/></h5>
              <h5><PersonFill className='text-dark'/></h5>
+             <Button onClick={()=>{navigate('/login')}}>Logout</Button>
             </div>
           </Navbar.Text>
         </Navbar.Collapse>

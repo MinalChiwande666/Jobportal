@@ -5,6 +5,7 @@ import { createSlice } from "@reduxjs/toolkit";
 
 const initialState = {
     job: {
+        id:Math.floor(Math.random(90000) * 10000),
         job_title: '',
         number_of_vacancy: '',
         job_location_type: '',
@@ -13,6 +14,7 @@ const initialState = {
         schedules: null,
         salary : null,
         benifits : null,
+        description : "",
         posted_on : new Date().toISOString(),
         status: 'Draft'
     },
@@ -44,9 +46,18 @@ const jobSlice = createSlice({
             }
 
             state.jobs.push({...state.job,...action.payload})
+        },
+        seteditDecsription : (state,action)=>{
+            let findData = state.jobs.findIndex((j)=> j.id === action.payload.id)
+            state.jobs[findData] = {
+                ...state.job,
+                description: action.payload.desc
+            }
+
+          
         }
     }
 })
 
-export const { setBasicDetails, setOtherDetails, setPayAndBenifits } = jobSlice.actions;
+export const { setBasicDetails, setOtherDetails, setPayAndBenifits, seteditDecsription } = jobSlice.actions;
 export default jobSlice.reducer

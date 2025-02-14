@@ -5,3 +5,5 @@ export const BasicDetailsSchema = Yup.object({
     number_of_vacancy : Yup.string().required('No of Vacancy Required'),
     job_location_type : Yup.string().required('Job Location Type Reqiuired')
 })
+
+

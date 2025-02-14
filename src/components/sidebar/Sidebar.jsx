@@ -25,7 +25,7 @@ const Sidebar = ({open,setOpen}) => {
     {
         id:1,
         name:'Candidates',
-        nav: '/',
+        nav: '/candidate',
         icon:<PersonRaisedHand/>
     },
     {
@@ -52,7 +52,7 @@ const Sidebar = ({open,setOpen}) => {
             ))
          }
          <div className='p-2'>
-         <Button className='d-flex align-items-center gap-2' variant="outline-light"><BoxArrowInUp/><span>Logout</span></Button>
+         <Button onClick={()=>{navigate('/login')}} className='d-flex align-items-center gap-2' variant="outline-light"><BoxArrowInUp/><span>Logout</span></Button>
          </div>
       </Offcanvas.Body>
     </Offcanvas>
